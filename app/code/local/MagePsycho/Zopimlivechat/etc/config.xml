@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   MagePsycho
+ * @package    MagePsycho_Zopimlivechat
+ * @author     info@magepsycho.com
+ * @website    http://www.magepsycho.com
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <MagePsycho_Zopimlivechat>
+            <version>0.1.0</version>
+        </MagePsycho_Zopimlivechat>
+    </modules>
+    <global>
+        <models>
+            <zopimlivechat>
+                <class>MagePsycho_Zopimlivechat_Model</class>
+            </zopimlivechat>
+        </models>
+        <blocks>
+            <zopimlivechat>
+                <class>MagePsycho_Zopimlivechat_Block</class>
+            </zopimlivechat>
+        </blocks>
+        <helpers>
+            <zopimlivechat>
+                <class>MagePsycho_Zopimlivechat_Helper</class>
+            </zopimlivechat>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <zopimlivechat>
+                <use>standard</use>
+                <args>
+                    <module>MagePsycho_Zopimlivechat</module>
+                    <frontName>zopimlivechat</frontName>
+                </args>
+            </zopimlivechat>
+        </routers>
+		<layout>
+			<updates>
+				<zopimlivechat>
+					<file>zopimlivechat.xml</file>
+				</zopimlivechat>
+			</updates>
+		</layout>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <magepychoinfo>
+											<title>MagePsycho - Information</title>
+										</magepychoinfo>
+                                        <zopimlivechat>
+                                            <title>Zopim Live Chat Section</title>
+                                        </zopimlivechat>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <zopimlivechat>
+            <option>
+                <active>1</active>
+				<enable_log>1</enable_log>
+            </option>
+        </zopimlivechat>
+    </default>
+</config>

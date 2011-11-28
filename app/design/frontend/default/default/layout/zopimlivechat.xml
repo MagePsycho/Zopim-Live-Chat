@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default>
+		<reference name="before_body_end">
+            <block type="zopimlivechat/zopimlivechat" name="mp_zopim_live_chat" />
+        </reference>
+	</default>
+</layout>
